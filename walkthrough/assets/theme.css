@@ -1,0 +1,58 @@
+body{overflow-x:hidden}
+::selection{background:var(--gold);color:var(--ink)}
+header.site nav.main.open a{color:var(--ink)!important}
+header.site .burger.open span{background:var(--ink)!important}
+body:not(.home) header.site:not(.solid) .name,body:not(.home) header.site:not(.solid) nav.main a{color:#fff}
+body:not(.home) header.site:not(.solid) nav.main a::after{background:var(--gold)}
+body:not(.home) header.site:not(.solid) .burger span{background:#fff}
+header.site:not(.solid) .name,header.site:not(.solid) nav.main a{color:#fff}
+header.site:not(.solid) nav.main a::after{background:var(--gold)}
+header.site:not(.solid) .burger span{background:#fff}
+/* DESIGN 12 — WALKTHROUGH: a floor plan that lights up room by room as you scroll */
+.wt-hero{min-height:100vh;background:radial-gradient(ellipse at 72% 45%,#37352b,#1b1b19 68%);color:#fff;display:flex;align-items:center;position:relative;overflow:hidden;padding:130px var(--pad) 90px}
+.wt-hero .in{position:relative;z-index:2;max-width:640px}
+.wt-hero .eyebrow{color:var(--gold)}.wt-hero .eyebrow::before{background:var(--gold)}
+.wt-hero h1{font-size:clamp(46px,6.6vw,108px);line-height:.98;font-weight:300}
+.wt-hero h1 em{color:var(--gold)}
+.wt-hero .lead{max-width:470px;margin:26px 0 40px;color:rgba(255,255,255,.76);font-size:16px}
+.wt-hero .cta{display:flex;gap:28px;align-items:center;flex-wrap:wrap}
+.wt-hero .btn{border-color:#fff;color:#fff}
+.wt-hero .btn.gold{background:var(--gold);color:var(--ink);border-color:var(--gold)}
+.wt-hero .btn:hover{background:#fff;color:var(--ink);border-color:#fff}
+.wt-hero .link{color:#fff;border-color:var(--gold)}
+.planbg{position:absolute;right:3%;top:54%;transform:translateY(-50%);width:min(52vw,760px);opacity:.95;pointer-events:none}
+.plan{width:100%;height:auto;overflow:visible;display:block}
+.plan g rect{stroke:var(--gold);stroke-width:1.2;fill:transparent;transition:fill .7s,stroke-width .5s}
+.plan text{fill:rgba(255,255,255,.5);font:500 7.5px var(--sans);letter-spacing:.24em;text-transform:uppercase;transition:fill .5s}
+.plan .door{stroke:var(--gold);stroke-width:1;opacity:.55}
+.plan g.on rect{fill:rgba(228,214,126,.36);stroke-width:2.2}
+.plan g.on text{fill:#fff}
+.plan.big g rect,.plan.big .door{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 2.6s ease forwards}
+.plan.big g:nth-child(2) rect{animation-delay:.25s}.plan.big g:nth-child(3) rect{animation-delay:.5s}.plan.big g:nth-child(4) rect{animation-delay:.75s}.plan.big g:nth-child(5) rect{animation-delay:1s}.plan.big .door{animation-delay:1.6s}
+@keyframes draw{to{stroke-dashoffset:0}}
+.tour{background:#1b1b19;color:#fff;display:grid;grid-template-columns:minmax(300px,38%) 1fr;gap:clamp(20px,4vw,70px);padding:0 var(--pad)}
+.plan-col .sticky{position:sticky;top:96px;height:calc(100vh - 120px);display:flex;flex-direction:column;justify-content:center;gap:26px}
+.plan-col .plan text{font-size:9px}
+.now{display:flex;align-items:baseline;gap:16px;font-family:var(--serif)}
+.now b{font-size:70px;font-weight:300;color:var(--gold);line-height:1;font-style:italic}
+.now span{font-size:30px}
+.scene{min-height:100vh;display:flex;flex-direction:column;justify-content:center;gap:26px;padding:60px 0;opacity:.3;transition:opacity .7s}
+.scene.on{opacity:1}
+.scene .shot{position:relative;aspect-ratio:4/3;overflow:hidden}
+.scene .shot img{width:100%;height:100%;object-fit:cover;transform:scale(1.1);transition:transform 1.8s cubic-bezier(.2,.7,.2,1)}
+.scene.on .shot img{transform:scale(1)}
+.scene .no{position:absolute;left:0;top:0;background:var(--gold);color:var(--ink);font-family:var(--serif);font-style:italic;font-size:26px;padding:6px 18px}
+.scene .eyebrow{color:var(--gold);margin-bottom:12px}.scene .eyebrow::before{background:var(--gold)}
+.scene h3{font-size:clamp(28px,3.2vw,46px);color:#fff;line-height:1.08}
+.scene h3 em{color:var(--gold)}
+.scene p{color:rgba(255,255,255,.7);max-width:520px;margin-top:14px}
+.marquee{background:var(--gold);color:var(--ink)}
+@media(max-width:980px){
+  .planbg{right:-30%;width:120vw;opacity:.35}
+  .tour{grid-template-columns:1fr;gap:0;padding:0}
+  .plan-col{position:sticky;top:78px;z-index:20;background:#1b1b19;border-bottom:1px solid rgba(255,255,255,.15);padding:8px var(--pad)}
+  .plan-col .sticky{position:static;height:auto;flex-direction:row;align-items:center;gap:18px}
+  .plan-col .plan{width:46%;flex:none}.plan-col .plan text{display:none}
+  .now b{font-size:38px}.now span{font-size:20px}
+  .scene{min-height:auto;padding:34px var(--pad);opacity:1}
+}
