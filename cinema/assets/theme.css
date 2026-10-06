@@ -1,0 +1,45 @@
+/* DESIGN 4 — CINEMA: full-screen photography, white type, gold details */
+body{overflow-x:hidden}
+::selection{background:var(--gold);color:var(--ink)}
+header.site:not(.solid) .name,header.site:not(.solid) nav.main a{color:#fff}
+header.site:not(.solid) nav.main a::after{background:var(--gold)}
+header.site:not(.solid) .burger span{background:#fff}
+header.site nav.main.open a{color:var(--ink)!important}
+header.site .burger.open span{background:var(--ink)!important}
+
+.hero4{position:relative;height:100vh;min-height:700px;overflow:hidden;color:#fff;display:flex;align-items:flex-end;padding:0}
+.hero4 .slide{position:absolute;inset:0;opacity:0;animation:fadeS 28s infinite}
+.hero4 .slide:nth-child(2){animation-delay:7s}.hero4 .slide:nth-child(3){animation-delay:14s}.hero4 .slide:nth-child(4){animation-delay:21s}
+.hero4 .slide img{width:100%;height:100%;object-fit:cover;animation:kb 28s infinite}
+.hero4 .slide:nth-child(2) img{animation-delay:7s}.hero4 .slide:nth-child(3) img{animation-delay:14s}.hero4 .slide:nth-child(4) img{animation-delay:21s}
+@keyframes fadeS{0%{opacity:0}4%{opacity:1}25%{opacity:1}30%{opacity:0}100%{opacity:0}}
+@keyframes kb{0%{transform:scale(1)}30%{transform:scale(1.12)}100%{transform:scale(1.12)}}
+.hero4 .slide:first-child{opacity:1;animation-name:fadeS0}
+@keyframes fadeS0{0%{opacity:1}25%{opacity:1}30%{opacity:0}95%{opacity:0}100%{opacity:1}}
+.hero4 .shade{background:linear-gradient(90deg,rgba(18,18,16,.72) 0%,rgba(18,18,16,.3) 55%,rgba(18,18,16,.05) 100%),linear-gradient(180deg,rgba(18,18,16,.5) 0%,rgba(18,18,16,0) 30%,rgba(18,18,16,.65) 100%)}
+.hero4 .in{position:relative;z-index:3;padding:0 var(--pad) 12vh;max-width:1250px}
+.hero4 .eyebrow{color:#fff}.hero4 .eyebrow::before{background:var(--gold)}
+.hero4 h1{font-size:clamp(54px,9.4vw,150px);line-height:.95;font-weight:300}
+.hero4 h1 em{color:var(--gold)}
+.hero4 .lead{max-width:500px;margin:28px 0 40px;color:rgba(255,255,255,.86);font-size:16px}
+.hero4 .cta{display:flex;gap:30px;align-items:center;flex-wrap:wrap}
+.hero4 .btn{border-color:#fff;color:#fff}
+.hero4 .btn.gold{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+.hero4 .btn:hover{background:#fff;border-color:#fff;color:var(--ink)}
+.hero4 .link{border-color:var(--gold);color:#fff}
+.hero4 .side{position:absolute;right:var(--pad);bottom:12vh;z-index:3;width:250px;background:rgba(255,255,255,.12);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.35);padding:12px}
+.hero4 .side img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.hero4 .side div{padding:12px 6px 4px;font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:#fff}
+.hero4 .side div b{display:block;font-family:var(--serif);font-size:22px;letter-spacing:0;text-transform:none;font-weight:400;margin-bottom:2px}
+.hero4 .bar{position:absolute;left:0;bottom:0;height:3px;background:var(--gold);z-index:4;animation:prog 7s linear infinite}
+@keyframes prog{from{width:0}to{width:100%}}
+
+.marquee{background:var(--gold);color:var(--ink)}
+.marquee .track span::after{color:var(--ink)}
+.stats b{color:var(--gold-deep)}
+.svc{aspect-ratio:3/4.6}
+.card .meta h3{transition:color .3s}.card:hover .meta h3{color:var(--gold-deep)}
+.dark-sec{background:var(--ink)}
+.quote.photo{padding:clamp(100px,14vw,220px) 0}
+
+@media(max-width:980px){.hero4 .side{display:none}.hero4 .in{padding-bottom:9vh}}

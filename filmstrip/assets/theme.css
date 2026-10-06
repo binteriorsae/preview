@@ -1,0 +1,31 @@
+body{overflow-x:hidden}
+::selection{background:var(--gold);color:var(--ink)}
+body header.site:not(.solid) .name,body header.site:not(.solid) nav.main a{color:#fff}
+body header.site:not(.solid) nav.main a::after{background:var(--gold)}
+body header.site:not(.solid) .burger span{background:#fff}
+header.site nav.main.open a{color:var(--ink)!important}
+header.site .burger.open span{background:var(--ink)!important}
+/* DESIGN 9 — FILMSTRIP: dark hero with two counter-scrolling photo strips */
+.hero9{min-height:100vh;background:radial-gradient(ellipse at 50% 0%,#37352b,#1b1b19 70%);color:#fff;padding:130px 0 0;display:flex;flex-direction:column;overflow:hidden}
+.hero9 .in{text-align:center;padding:0 var(--pad);margin-bottom:34px}
+.hero9 .eyebrow{justify-content:center;color:var(--gold)}
+.hero9 .eyebrow::before{background:var(--gold)}.hero9 .eyebrow::after{content:"";width:38px;height:1px;background:var(--gold)}
+.hero9 h1{font-size:clamp(50px,8.5vw,128px);line-height:.95;font-weight:300}
+.hero9 h1 em{color:var(--gold)}
+.hero9 .lead{max-width:480px;margin:18px auto 28px;color:rgba(255,255,255,.75)}
+.hero9 .cta{display:flex;gap:28px;justify-content:center;align-items:center;flex-wrap:wrap}
+.hero9 .btn{border-color:#fff;color:#fff}.hero9 .btn:hover{background:#fff;color:var(--ink)}
+.hero9 .btn.gold{background:var(--gold);color:var(--ink);border-color:var(--gold)}
+.hero9 .link{color:#fff;border-color:var(--gold)}
+.hero9 .strips{margin-top:auto;display:grid;gap:10px;padding-bottom:10px}
+.hero9 .rowf{overflow:hidden}
+.hero9 .trk{display:flex;gap:10px;width:max-content;animation:film 60s linear infinite}
+.hero9 .r2 .trk{animation-direction:reverse;animation-duration:70s}
+.hero9 .rowf:hover .trk{animation-play-state:paused}
+.hero9 .f{width:clamp(180px,22vw,320px);height:clamp(110px,15vh,170px);flex:none;overflow:hidden}
+.hero9 .f img{width:100%;height:100%;object-fit:cover;transition:transform 1s}
+.hero9 .f:hover img{transform:scale(1.12)}
+@keyframes film{to{transform:translateX(-50%)}}
+.marquee{background:var(--gold);color:var(--ink)}.marquee .track span::after{color:var(--ink)}
+.dark-sec{background:var(--ink)}
+@media(max-width:980px){.hero9 .f{height:90px}}
