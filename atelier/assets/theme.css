@@ -1,0 +1,49 @@
+body{overflow-x:hidden}
+::selection{background:var(--gold);color:var(--ink)}
+header.site nav.main.open a{color:var(--ink)!important}
+header.site .burger.open span{background:var(--ink)!important}
+body:not(.home) header.site:not(.solid) .name,body:not(.home) header.site:not(.solid) nav.main a{color:#fff}
+body:not(.home) header.site:not(.solid) nav.main a::after{background:var(--gold)}
+body:not(.home) header.site:not(.solid) .burger span{background:#fff}
+/* DESIGN 15 — ATELIER: a designer's material sample table */
+:root{--paper:#f4efe4;--line:rgba(42,42,40,.2)}
+h1,h2,h3{font-weight:300}
+.at-hero{min-height:100vh;background:var(--paper);display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(24px,4vw,70px);align-items:center;padding:118px var(--pad) 50px}
+.at-hero h1{font-size:clamp(44px,5.8vw,92px);line-height:1}
+.at-hero h1 em{color:var(--gold-deep)}
+.at-hero .lead{max-width:430px;margin:24px 0 36px;color:var(--ink-soft);font-size:16px}
+.at-hero .cta{display:flex;gap:26px;align-items:center;flex-wrap:wrap}
+.board{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(2,minmax(0,1fr));gap:10px;height:min(76vh,700px);padding:14px;background:#fff;box-shadow:0 30px 70px rgba(42,42,40,.16);position:relative}
+.board::before{content:"Sample table · B Interiors";position:absolute;left:14px;top:-26px;font-size:10px;letter-spacing:.34em;text-transform:uppercase;font-weight:500;color:var(--ink-soft)}
+.sw{position:relative;overflow:hidden;cursor:pointer;outline:0}
+.sw .tex{position:absolute;inset:0;transition:opacity .6s}
+.sw img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.1);transition:opacity .7s,transform 1.6s cubic-bezier(.2,.7,.2,1)}
+.sw:hover img,.sw:focus img,.sw.on img{opacity:1;transform:scale(1)}
+.sw:hover .tex,.sw:focus .tex,.sw.on .tex{opacity:0}
+.sw .nm{position:absolute;left:10px;bottom:10px;z-index:2;background:rgba(255,255,255,.93);padding:8px 12px;font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;line-height:1.5}
+.sw .nm small{display:block;color:var(--ink-soft);font-size:8.5px}
+.sw.marble .tex{background:linear-gradient(62deg,transparent 47%,rgba(90,90,90,.4) 48%,transparent 49.4%),linear-gradient(118deg,transparent 58%,rgba(90,90,90,.22) 59%,transparent 60.5%),linear-gradient(160deg,transparent 30%,rgba(120,120,120,.18) 31%,transparent 32%),radial-gradient(ellipse at 30% 20%,rgba(0,0,0,.06),transparent 55%),linear-gradient(115deg,#f6f4ef,#e8e5de 50%,#f4f2ec)}
+.sw.oak .tex{background:repeating-linear-gradient(90deg,#c9a06a 0 15px,#b98a52 15px 16px,#d3ab74 16px 36px,#a97d48 36px 37px),linear-gradient(#fff2,#0002);background-blend-mode:multiply}
+.sw.boucle .tex{background:radial-gradient(circle at 25% 30%,#fff 2px,transparent 3.2px) 0 0/13px 13px,radial-gradient(circle at 70% 65%,#efe8da 2.2px,transparent 3.4px) 6px 6px/13px 13px,#e6dccb}
+.sw.brass .tex{background:linear-gradient(135deg,#7a5d22,#cdbd55 28%,#fff0a6 48%,#b99a3c 68%,#6f531c)}
+.sw.plaster .tex{background:radial-gradient(circle at 30% 35%,rgba(255,255,255,.55),transparent 60%),radial-gradient(circle at 75% 70%,rgba(0,0,0,.07),transparent 55%),#d9d1c0}
+.sw.velvet .tex{background:radial-gradient(ellipse at 28% 22%,#55554f,#242422 72%)}
+.sw.marble .nm,.sw.oak .nm,.sw.boucle .nm,.sw.plaster .nm{color:var(--ink)}
+.marquee{background:var(--ink);color:var(--gold)}
+.frame{box-shadow:none;outline:1px solid var(--ink);outline-offset:10px;margin:10px}
+.frame::after{inset:12px}
+.pgrid{counter-reset:ref}
+.card .meta{flex-direction:column;align-items:flex-start;gap:2px;border-top:1px solid var(--ink);padding-top:12px}
+.card .meta::before{counter-increment:ref;content:"Ref. BI-0" counter(ref);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-deep);font-weight:500}
+.stats{border-color:var(--ink)}
+.stats div{border-color:var(--ink)}
+.srow,.slist{border-color:var(--ink)}
+.eyebrow::before{background:var(--ink)}
+.svc{aspect-ratio:3/4.4;outline:1px solid #fff;outline-offset:-10px}
+.dark-sec{background:var(--ink)}
+@media(max-width:980px){
+  .at-hero{grid-template-columns:1fr;padding-top:110px}
+  .board{grid-template-columns:repeat(2,1fr);grid-template-rows:none;grid-auto-rows:auto;height:auto}
+  .sw{height:42vw}
+  .board::after{content:"Tap a swatch to see the room";grid-column:1/3;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft);padding-top:4px}
+}
