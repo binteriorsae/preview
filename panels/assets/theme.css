@@ -50,11 +50,23 @@ header.site .burger.open span{background:var(--ink)!important}
 .dark-sec{background:var(--ink)}
 .quote.photo{padding:clamp(100px,14vw,220px) 0}
 
+.hero6 .pnl{display:contents}
+.hero6 .hbg{display:none}
 @media(max-width:980px){
-  .hero6{flex-direction:column;height:auto;min-height:100vh}
-  .hero6 .panel{flex:none;height:22vh;border-right:0;border-bottom:1px solid rgba(255,255,255,.4)}
-  .hero6 .head{position:absolute;transform:none;top:110px}
-  .hero6 .lab span{writing-mode:horizontal-tb;transform:none}
+  /* phone/tablet: headline over a photo, panels become a swipeable row beneath */
+  .hero6{display:flex;flex-direction:column;height:auto;min-height:0;background:#161614;overflow:visible}
+  .hero6 .head{position:relative;order:-1;transform:none;top:auto;left:auto;right:auto;max-width:none;padding:130px var(--pad) 44px;min-height:72vh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;pointer-events:auto}
+  .hero6 .head>*:not(.hbg){position:relative;z-index:2}
+  .hero6 .hbg{display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;filter:brightness(.55)}
+  .hero6 .head::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(14,14,12,.5),rgba(14,14,12,.1) 40%,rgba(14,14,12,.7))}
+  .hero6 h1{font-size:clamp(44px,13vw,84px)}
+  .hero6 .pnl{display:flex;gap:8px;overflow-x:auto;scroll-snap-type:x mandatory;padding:10px var(--pad) 22px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .hero6 .pnl::-webkit-scrollbar{display:none}
+  .hero6 .panel,.hero6 .panel:hover,.hero6 .panel.on{flex:0 0 74vw;max-width:340px;height:44vh;min-height:300px;scroll-snap-align:start;border:0;transition:none}
+  .hero6 .panel img,.hero6 .panel:hover img{transform:none;filter:brightness(.95)}
+  .hero6 .lab{left:18px;bottom:20px}
+  .hero6 .lab span,.hero6 .panel:hover .lab span{writing-mode:horizontal-tb;transform:none}
   .svc-grid{flex-direction:column}
   .svc{height:380px;flex:none}
+  .phero::after{display:none}
 }
