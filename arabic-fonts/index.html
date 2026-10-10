@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="../favicon.jpg">
+<title>B Interiors Arabic Fonts</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@300;400;500;700&family=Cairo:wght@300;400;500;700&family=El+Messiri:wght@400;500;700&family=Reem+Kufi:wght@400;500;700&family=Markazi+Text:wght@400;500;700&family=Noto+Naskh+Arabic:wght@400;500;700&family=Aref+Ruqaa:wght@400;700&family=Noto+Kufi+Arabic:wght@300;400;500;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;700&family=Almarai:wght@300;400;700&family=Alexandria:wght@300;400;500;700&family=Scheherazade+New:wght@400;500;700&family=Noto+Sans+Arabic:wght@300;400;500;700&family=Readex+Pro:wght@300;400;500;700&family=Montserrat:wght@400;500&family=Cormorant+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light}
+html,body{margin:0}
+[hidden]{display:none!important}
+/* Layout: controls on the left, a sticky live preview of the website on the right
+   (preview first on phones). Palette and type come from the B Interiors site. */
+:root{
+  --bg:#f7f7f7; --fg:#2a2a28; --muted:#5b5b56; --line:rgba(42,42,40,.16);
+  --card:#ffffff; --card-on:#fbf6d6; --gold:#e4d67e; --gold-deep:#b9a93f; --on-gold:#2a2a28;
+  --focus:#7a6a14;
+  /* the website preview always shows the real site colours */
+  --sheet:#f7f7f7; --sheet-fg:#2a2a28; --sheet-muted:#5b5b56; --sheet-line:rgba(42,42,40,.18);
+  --ui:'Montserrat',system-ui,sans-serif; --display:'Cormorant Garamond',Georgia,serif;
+  --head:'Amiri'; --body:'Tajawal'; --hw:400; --bw:400;
+  --fallback:'Segoe UI',Tahoma,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#1d1d1b; --fg:#f1eddc; --muted:#b4b0a0; --line:rgba(255,255,255,.16);
+  --card:#272725; --card-on:#3a3716; --gold-deep:#e4d67e; --focus:#e4d67e; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#1d1d1b; --fg:#f1eddc; --muted:#b4b0a0; --line:rgba(255,255,255,.16);
+  --card:#272725; --card-on:#3a3716; --gold-deep:#e4d67e; --focus:#e4d67e; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:400 15px/1.6 var(--ui);padding-inline:clamp(16px,4vw,48px);padding-block:clamp(24px,4vw,56px)}
+.wrap{max-width:1240px;margin-inline:auto}
+header h1{font:400 clamp(38px,6vw,64px)/1.05 var(--display);margin:0 0 12px;text-wrap:balance}
+header h1 em{color:var(--gold-deep)}
+header p{max-width:62ch;margin:0;color:var(--muted)}
+.eyebrow{font-size:11px;letter-spacing:.3em;text-transform:uppercase;font-weight:500;color:var(--muted);margin:0 0 14px}
+
+.layout{display:grid;gap:clamp(24px,3vw,48px);margin-top:clamp(28px,4vw,48px);grid-template-columns:minmax(0,1fr)}
+@media(min-width:1000px){.layout{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);align-items:start}
+  .preview-col{position:sticky;top:env(safe-area-inset-top,0px);padding-top:0;order:2}.controls{order:1}}
+.preview-col{display:flex;flex-direction:column;gap:12px;min-width:0}
+
+/* ---------- controls ---------- */
+.controls{display:flex;flex-direction:column;gap:clamp(28px,3.5vw,44px);min-width:0}
+h2{font:400 clamp(26px,3vw,34px)/1.1 var(--display);margin:0 0 6px}
+.sub{color:var(--muted);margin:0 0 16px;max-width:60ch}
+.row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.pill{font:500 12px var(--ui);letter-spacing:.04em;padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--fg);cursor:pointer}
+.pill[aria-checked="true"]{background:var(--gold);border-color:var(--gold);color:var(--on-gold)}
+.pill:focus-visible,.opt:focus-visible,.btn:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+.label{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);align-self:center;margin-inline-end:4px}
+
+.grid{display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(min(100%,270px),1fr))}
+.opt{position:relative;text-align:start;font:inherit;color:inherit;background:var(--card);border:1px solid var(--line);padding:16px 16px 14px;cursor:pointer;display:flex;flex-direction:column;gap:10px;min-width:0}
+.opt[aria-checked="true"]{border-color:var(--gold-deep);box-shadow:inset 0 0 0 1px var(--gold-deep);background:var(--card-on)}
+.opt .top{display:flex;justify-content:space-between;gap:8px;align-items:baseline}
+.opt .name{font-weight:500;font-size:13px}
+.tags{display:flex;gap:6px;flex-wrap:wrap}
+.tag{font-size:10px;letter-spacing:.14em;text-transform:uppercase;padding:2px 8px;border-radius:999px;background:var(--gold);color:var(--on-gold)}
+.tag.cur{background:transparent;border:1px solid var(--line);color:var(--muted)}
+.sample{direction:rtl;font-size:clamp(26px,3vw,32px);line-height:1.45;text-align:right;overflow-wrap:anywhere}
+.sample.sm{font-size:19px;line-height:1.7}
+.note{font-size:12.5px;color:var(--muted);line-height:1.5}
+
+/* ---------- website preview ---------- */
+.sheet{direction:rtl;background:var(--sheet);color:var(--sheet-fg);border:1px solid var(--line);overflow:hidden}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 18px;border-bottom:1px solid var(--sheet-line);flex-wrap:wrap}
+.nav .logo{direction:ltr;font:500 11px var(--ui);letter-spacing:.38em;display:flex;align-items:center;gap:10px}
+.nav .logo i{display:grid;place-items:center;width:30px;height:30px;background:var(--gold);font:400 22px/1 var(--display);font-style:normal;color:#fff}
+.nav ul{list-style:none;margin:0;padding:0;display:flex;gap:16px;flex-wrap:wrap}
+.nav li,.sheet .b{font-family:var(--body),var(--fallback);font-weight:var(--bw)}
+.nav li{font-size:14px}
+.hero{padding:clamp(22px,3.4vw,34px) clamp(18px,3vw,30px)}
+.hero .eye{font-size:13px;color:var(--sheet-muted);display:flex;align-items:center;gap:10px;margin:0 0 14px}
+.hero .eye::before{content:"";width:34px;height:1px;background:var(--gold-deep)}
+.sheet h3{font-family:var(--head),var(--fallback);font-weight:var(--hw);margin:0}
+.hero h3{font-size:clamp(40px,5.4vw,60px);line-height:1.22;text-wrap:balance}
+.hero h3 em{font-style:normal;color:var(--gold-deep)}
+.hero p{font-size:15px;line-height:1.95;color:var(--sheet-muted);margin:14px 0 20px;max-width:46ch}
+.hero .cta{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.btn{font-family:var(--body),var(--fallback);font-weight:500;font-size:14px;padding:11px 22px;border:1px solid var(--sheet-fg);background:var(--gold);color:#2a2a28;border-color:var(--gold);cursor:default}
+.link{font-family:var(--body),var(--fallback);font-size:14px;border-bottom:1px solid var(--sheet-fg);padding-bottom:3px}
+.svc{border-top:1px solid var(--sheet-fg);margin:0 clamp(18px,3vw,30px);padding:18px 0 20px;display:grid;grid-template-columns:auto 1fr;gap:6px 16px;align-items:baseline}
+.svc .no{font-family:var(--display);font-style:italic;color:var(--gold-deep);font-size:22px}
+.svc h4{font-family:var(--head),var(--fallback);font-weight:var(--hw);font-size:clamp(28px,3.6vw,38px);line-height:1.2;margin:0}
+.svc p{grid-column:2;margin:0;color:var(--sheet-muted);font-size:14.5px;line-height:1.9}
+.svc ul{grid-column:2;list-style:none;margin:6px 0 0;padding:0}
+.svc li{font-size:14px;padding:7px 0;border-bottom:1px solid var(--sheet-line)}
+.svc li::before{content:"— ";color:var(--gold-deep)}
+.card{margin:6px clamp(18px,3vw,30px) clamp(18px,3vw,26px);position:relative;aspect-ratio:16/8;max-height:210px;background:linear-gradient(135deg,#3b3a35,#1c1c1a 60%,#5b5230);color:#fff;display:flex;flex-direction:column;justify-content:flex-end;padding:18px 22px;gap:2px}
+.card .cap{font-size:12.5px;opacity:.85}
+.card h4{font-family:var(--head),var(--fallback);font-weight:var(--hw);font-size:clamp(28px,3.4vw,36px);line-height:1.2;margin:0}
+.card .meta{font-size:13px;opacity:.8}
+
+/* ---------- your pick ---------- */
+.pick{background:var(--card);border:1px solid var(--line);padding:14px 16px;display:flex;gap:12px 20px;flex-wrap:wrap;align-items:center;justify-content:space-between}
+.pick dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:2px 12px;font-size:13px;min-width:0}
+.pick dt{color:var(--muted);font-size:11px;letter-spacing:.18em;text-transform:uppercase;align-self:center}
+.pick dd{margin:0;font-weight:500}
+.pick .acts{display:flex;gap:8px;flex-wrap:wrap}
+.copy{font:500 12px var(--ui);padding:9px 16px;border:1px solid var(--fg);background:var(--fg);color:var(--bg);cursor:pointer}
+.reset{font:500 12px var(--ui);padding:9px 16px;border:1px solid var(--line);background:transparent;color:var(--fg);cursor:pointer}
+.copy:focus-visible,.reset:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+.status{font-size:12px;color:var(--muted);min-height:1.4em;margin:0}
+@media(prefers-reduced-motion:no-preference){.opt,.pill{transition:background .2s,border-color .2s}}
+</style>
+
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <p class="eyebrow">B Interiors · Arabic version</p>
+    <h1>Choose the Arabic <em>typefaces</em></h1>
+    <p>Pick a heading font and a body font. The preview shows the real text from your site, set right to left. Amiri and Tajawal are what the site uses now.</p>
+  </header>
+
+  <div class="layout">
+    <section class="preview-col" aria-label="Live preview">
+      <div class="sheet" id="sheet">
+        <div class="nav">
+          <div class="logo"><i>B</i>B INTERIORS</div>
+          <ul class="b"><li>الرئيسية</li><li>نبذة</li><li>الخدمات</li><li>الأعمال</li><li>تواصل</li></ul>
+        </div>
+        <div class="hero">
+          <p class="eye b">استوديو تصميم داخلي · الإمارات</p>
+          <h3>مساحات<br>ب<em>أناقة هادئة</em><br>وروح.</h3>
+          <p class="b">أنا بيان جيجكلي. أصمّم مساحات هادئة، متعددة الطبقات ومفصّلة بعناية — حيث كل تفصيل مدروس ولا شيء فيه محض صدفة.</p>
+          <div class="cta"><span class="btn">ابدأ مشروعك</span><span class="link">شاهد الأعمال</span></div>
+        </div>
+        <div class="svc">
+          <span class="no">01</span><h4>التصميم السكني</h4>
+          <p class="b">تصميم داخلي متكامل للفلل والشقق والبنتهاوس — من التخطيط والتشطيبات إلى الإضاءة والأثاث.</p>
+          <ul class="b"><li>تخطيط المساحات والمخططات</li><li>اختيار الخامات والألوان</li></ul>
+        </div>
+        <div class="card">
+          <span class="cap b">سكني</span>
+          <h4>إقامة القوس</h4>
+          <span class="meta b">فيلا · 2025</span>
+        </div>
+      </div>
+      <p class="status" id="status" role="status" aria-live="polite"></p>
+      <div class="pick">
+        <dl>
+          <dt>Headings</dt><dd id="pickH"></dd>
+          <dt>Body</dt><dd id="pickB"></dd>
+        </dl>
+        <div class="acts">
+          <button class="reset" id="reset" type="button">Back to current</button>
+          <button class="copy" id="copy" type="button">Copy my choice</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="controls">
+      <section aria-labelledby="hh">
+        <h2 id="hh">Heading font</h2>
+        <p class="sub">Used for the big titles: the home headline, service names and project names.</p>
+        <div class="row" role="radiogroup" aria-label="Heading weight" id="hw"><span class="label">Weight</span></div>
+        <div class="grid" role="radiogroup" aria-label="Heading font" id="heads"></div>
+      </section>
+
+      <section aria-labelledby="bh">
+        <h2 id="bh">Body font</h2>
+        <p class="sub">Used for menus, paragraphs, buttons and lists.</p>
+        <div class="row" role="radiogroup" aria-label="Body weight" id="bw"><span class="label">Weight</span></div>
+        <div class="grid" role="radiogroup" aria-label="Body font" id="bodies"></div>
+      </section>
+    </div>
+  </div>
+</div>
+
+<script>
+var HEADS=[
+ {f:'Amiri',cur:1,note:'Classical naskh with calligraphic strokes. Traditional and a little bookish.'},
+ {f:'Tajawal',pick:1,note:'Clean modern sans, the same family as your body text. At Light weight it sits well next to Montserrat.'},
+ {f:'El Messiri',pick:1,note:'Elegant display face with sharper contrast. Refined, closest to a magazine feel.'},
+ {f:'Markazi Text',pick:1,note:'Arabic serif with a book-like texture, nearest in spirit to Cormorant Garamond.'},
+ {f:'Noto Naskh Arabic',note:'Neutral naskh. Calm and readable, less decorative than Amiri.'},
+ {f:'Reem Kufi',note:'Geometric Kufi. Minimal and architectural, strongest on short titles.'},
+ {f:'Noto Kufi Arabic',note:'Clean Kufi sans with many weights. Modern and precise.'},
+ {f:'Cairo',note:'Friendly geometric sans. Very legible, slightly heavier in feel.'},
+ {f:'Alexandria',note:'Contemporary geometric sans with a wide weight range.'},
+ {f:'IBM Plex Sans Arabic',note:'Crisp, technical sans. Neutral and sharp.'},
+ {f:'Almarai',note:'Soft, rounded modern sans. Friendly.'},
+ {f:'Aref Ruqaa',note:'Calligraphic ruqaa. Expressive, best for a few words only.'},
+ {f:'Scheherazade New',note:'Traditional naskh made for long reading. Very classical.'}
+];
+var BODIES=[
+ {f:'Tajawal',cur:1,pick:1,note:'Light, modern sans. Your current body font.'},
+ {f:'Cairo',note:'Geometric and very legible.'},
+ {f:'IBM Plex Sans Arabic',note:'Crisp and neutral.'},
+ {f:'Noto Sans Arabic',note:'Neutral, wide language coverage.'},
+ {f:'Almarai',note:'Soft and rounded.'},
+ {f:'Alexandria',note:'Contemporary, slightly wide.'},
+ {f:'Readex Pro',note:'Open letterforms, easy at small sizes.'},
+ {f:'Noto Naskh Arabic',note:'Naskh style, good for longer paragraphs.'}
+];
+var HW=[300,400,500,700], BW=[300,400,500];
+var WN={300:'Light',400:'Regular',500:'Medium',700:'Bold'};
+var DEF={h:'Amiri',b:'Tajawal',hw:400,bw:400};
+var S={h:DEF.h,b:DEF.b,hw:DEF.hw,bw:DEF.bw};
+var root=document.documentElement;
+function $(id){return document.getElementById(id)}
+
+function mkOpt(list,kind){
+  var host=$(kind==='h'?'heads':'bodies');
+  list.forEach(function(it){
+    var b=document.createElement('button');
+    b.type='button'; b.className='opt'; b.setAttribute('role','radio'); b.dataset.f=it.f; b.dataset.k=kind;
+    var tags='';
+    if(it.cur) tags+='<span class="tag cur">Current</span>';
+    if(it.pick) tags+='<span class="tag">Suggested</span>';
+    var fam="'"+it.f+"',Tahoma,sans-serif";
+    b.innerHTML='<div class="top"><span class="name">'+it.f+'</span><span class="tags">'+tags+'</span></div>'+
+      (kind==='h'
+        ?'<div class="sample" style="font-family:'+fam+'">مساحات بأناقة هادئة وروح.</div><div class="sample sm" style="font-family:'+fam+'">تصميم يبدو سهلًا، لأنه مدروس بعناية</div>'
+        :'<div class="sample sm" style="font-family:'+fam+';font-weight:400">أصمّم مساحات هادئة، متعددة الطبقات ومفصّلة بعناية.</div>')+
+      '<div class="note">'+it.note+'</div>';
+    b.addEventListener('click',function(){S[kind]=it.f;render()});
+    host.appendChild(b);
+  });
+}
+function mkWeights(ws,kind){
+  var host=$(kind==='h'?'hw':'bw');
+  ws.forEach(function(w){
+    var b=document.createElement('button');
+    b.type='button'; b.className='pill'; b.setAttribute('role','radio'); b.dataset.w=w; b.dataset.k=kind;
+    b.textContent=WN[w];
+    b.addEventListener('click',function(){S[kind+'w']=w;render()});
+    host.appendChild(b);
+  });
+}
+function render(){
+  root.style.setProperty('--head',"'"+S.h+"'");
+  root.style.setProperty('--body',"'"+S.b+"'");
+  root.style.setProperty('--hw',S.hw);
+  root.style.setProperty('--bw',S.bw);
+  document.querySelectorAll('.opt').forEach(function(o){
+    var on=o.dataset.f===S[o.dataset.k];
+    o.setAttribute('aria-checked',on); o.tabIndex=on?0:-1;
+  });
+  document.querySelectorAll('.pill').forEach(function(p){
+    var on=+p.dataset.w===S[p.dataset.k+'w'];
+    p.setAttribute('aria-checked',on); p.tabIndex=on?0:-1;
+  });
+  $('pickH').textContent=S.h+', '+WN[S.hw];
+  $('pickB').textContent=S.b+', '+WN[S.bw];
+}
+mkWeights(HW,'h'); mkWeights(BW,'b'); mkOpt(HEADS,'h'); mkOpt(BODIES,'b'); render();
+
+// arrow keys move between options in a group
+document.addEventListener('keydown',function(e){
+  var t=e.target; if(!t.matches||!t.matches('[role="radio"]')) return;
+  var keys=['ArrowRight','ArrowDown','ArrowLeft','ArrowUp']; if(keys.indexOf(e.key)<0) return;
+  var group=[].slice.call(t.parentNode.querySelectorAll('[role="radio"]'));
+  var i=group.indexOf(t), d=(e.key==='ArrowRight'||e.key==='ArrowDown')?1:-1;
+  var n=group[(i+d+group.length)%group.length]; n.focus(); n.click(); e.preventDefault();
+});
+
+$('reset').addEventListener('click',function(){S.h=DEF.h;S.b=DEF.b;S.hw=DEF.hw;S.bw=DEF.bw;render();$('status').textContent='Back to the fonts the site uses now.'});
+$('copy').addEventListener('click',function(){
+  var txt='Arabic headings: '+S.h+' ('+WN[S.hw]+'), body: '+S.b+' ('+WN[S.bw]+')';
+  var ok=function(){$('status').textContent='Copied. Paste it into the chat: '+txt};
+  var fail=function(){$('status').textContent='Copy it from here: '+txt};
+  try{ navigator.clipboard.writeText(txt).then(ok,fail) }catch(e){ fail() }
+});
+</script>
+</body>
+</html>
