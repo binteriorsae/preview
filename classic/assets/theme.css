@@ -24,3 +24,18 @@ footer.site{border-top:1px solid rgba(255,255,255,.16)}
   .hero .right .seal{left:50%;top:100%;width:104px;height:104px;border-width:5px}
   .hero .left{padding-top:86px}
 }
+
+/* About: principles on the dark theme */
+.dark-sec .value{border-top-color:rgba(255,255,255,.35)}
+.dark-sec .value h3{color:#fff}
+.dark-sec .value p{color:rgba(247,247,247,.7)}
+
+/* About: "How We Work" on the light theme, steps as pinned note cards */
+.process h2 em{color:var(--gold-deep)}
+.process .step{background:var(--gold);color:var(--ink);padding:28px 24px 30px;border:0;box-shadow:0 14px 30px rgba(42,42,40,.2);transition:transform .45s,box-shadow .45s}
+.process .step:nth-child(odd){transform:rotate(-1.6deg)}
+.process .step:nth-child(even){transform:rotate(1.4deg)}
+.process .step:hover{transform:rotate(0) translateY(-8px);box-shadow:0 26px 50px rgba(42,42,40,.26)}
+.process .step .n{color:#fff}
+.process .step h3{color:var(--ink)}
+.process .step p{color:#3b3a32}
