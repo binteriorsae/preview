@@ -103,8 +103,8 @@ body.svc-page header.site:not(.solid) .burger span{background:var(--ink)}
 .ba-fig figcaption{display:flex;justify-content:space-between;gap:16px;padding-top:14px;font-family:var(--serif);font-size:22px}
 .ba-fig .hint{font-family:var(--sans);font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--ink-soft);padding-top:8px}
 .pn-sec{padding:0}
-.pn{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--ink);padding:0}
-.pn a{display:block;padding:clamp(30px,5vw,64px) 0;transition:background .4s,padding .4s}
+.pn{display:grid;grid-template-columns:1fr 1fr;padding:0 var(--pad)}
+.pn a{display:block;border-top:1px solid var(--ink);padding:clamp(30px,5vw,64px) clamp(14px,2vw,28px);transition:background .4s}
 .pn a+a{text-align:right;border-left:1px solid var(--line)}
 .pn small{display:block;font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;font-weight:500;color:var(--ink-soft);margin-bottom:10px}
 .pn span{font-family:var(--serif);font-size:clamp(28px,4vw,56px);line-height:1.05}
