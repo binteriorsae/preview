@@ -30,24 +30,27 @@
   <p class="rv">Whether you need a full transformation or a trusted second opinion, there’s a way to work together.</p>
 </div></section>
 <section class="sv"><div class="wrap">
-  <div class="sv-hint rv">Choose a service to open the details</div>
-  <div class="sv-list">
-    <details class="sv-row rv" name="service" open>
-      <summary><span class="no">01</span><span class="ttl">Residential Design</span><span class="plus" aria-hidden="true"></span></summary>
-      <div class="sv-body"><p class="desc">Complete interior design for villas, apartments and penthouses — from layout and finishes to lighting and furnishings.</p><ol><li>Space planning &amp; layouts</li><li>Concept &amp; mood boards</li><li>3D visualisation</li><li>Joinery &amp; bespoke furniture design</li><li>Material &amp; colour selection</li></ol></div>
-    </details>
-    <details class="sv-row rv" name="service">
-      <summary><span class="no">02</span><span class="ttl">Commercial Interiors</span><span class="plus" aria-hidden="true"></span></summary>
-      <div class="sv-body"><p class="desc">Welcoming, brand-led environments for boutiques, offices, restaurants and clinics that leave a lasting impression.</p><ol><li>Brand-aligned concepts</li><li>Functional space planning</li><li>Lighting design</li><li>FF&amp;E specification</li><li>Site supervision</li></ol></div>
-    </details>
-    <details class="sv-row rv" name="service">
-      <summary><span class="no">03</span><span class="ttl">Styling &amp; Furnishing</span><span class="plus" aria-hidden="true"></span></summary>
-      <div class="sv-body"><p class="desc">The finishing touches. Sourcing furniture, art, rugs and accessories to complete a room with warmth and personality.</p><ol><li>Furniture sourcing</li><li>Art &amp; accessory curation</li><li>Soft furnishings</li><li>Installation &amp; styling day</li><li>Refresh of existing rooms</li></ol></div>
-    </details>
-    <details class="sv-row rv" name="service">
-      <summary><span class="no">04</span><span class="ttl">Design Consultation</span><span class="plus" aria-hidden="true"></span></summary>
-      <div class="sv-body"><p class="desc">One-to-one guidance for those who want expert direction — in-person or online — and the confidence to do the rest.</p><ol><li>On-site or virtual sessions</li><li>Written recommendations</li><li>Colour &amp; layout advice</li><li>Shopping lists</li><li>Project reviews</li></ol></div>
-    </details>
+  <div class="stack">
+    <article class="sc c1" style="--i:0">
+      <div class="top"><span class="no">01</span><span class="of">Service 01 / 04</span></div>
+      <div class="main"><h2>Residential Design</h2><p class="desc">Complete interior design for villas, apartments and penthouses — from layout and finishes to lighting and furnishings.</p></div>
+      <ol><li>Space planning &amp; layouts</li><li>Concept &amp; mood boards</li><li>3D visualisation</li><li>Joinery &amp; bespoke furniture design</li><li>Material &amp; colour selection</li></ol>
+    </article>
+    <article class="sc c2" style="--i:1">
+      <div class="top"><span class="no">02</span><span class="of">Service 02 / 04</span></div>
+      <div class="main"><h2>Commercial Interiors</h2><p class="desc">Welcoming, brand-led environments for boutiques, offices, restaurants and clinics that leave a lasting impression.</p></div>
+      <ol><li>Brand-aligned concepts</li><li>Functional space planning</li><li>Lighting design</li><li>FF&amp;E specification</li><li>Site supervision</li></ol>
+    </article>
+    <article class="sc c3" style="--i:2">
+      <div class="top"><span class="no">03</span><span class="of">Service 03 / 04</span></div>
+      <div class="main"><h2>Styling &amp; Furnishing</h2><p class="desc">The finishing touches. Sourcing furniture, art, rugs and accessories to complete a room with warmth and personality.</p></div>
+      <ol><li>Furniture sourcing</li><li>Art &amp; accessory curation</li><li>Soft furnishings</li><li>Installation &amp; styling day</li><li>Refresh of existing rooms</li></ol>
+    </article>
+    <article class="sc c4" style="--i:3">
+      <div class="top"><span class="no">04</span><span class="of">Service 04 / 04</span></div>
+      <div class="main"><h2>Design Consultation</h2><p class="desc">One-to-one guidance for those who want expert direction — in-person or online — and the confidence to do the rest.</p></div>
+      <ol><li>On-site or virtual sessions</li><li>Written recommendations</li><li>Colour &amp; layout advice</li><li>Shopping lists</li><li>Project reviews</li></ol>
+    </article>
   </div>
   <p class="sv-close rv">Every project begins with a <em>conversation.</em></p>
 </div></section>
@@ -63,9 +66,5 @@
 </div></footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script>
-// keep one service open at a time (fallback for browsers without exclusive <details name>)
-(function(){var d=[].slice.call(document.querySelectorAll('.sv-row'));d.forEach(function(x){x.addEventListener('toggle',function(){if(x.open)d.forEach(function(y){if(y!==x)y.open=false;});});});})();
-</script>
 <script src="assets/main.js"></script>
 </body></html>
