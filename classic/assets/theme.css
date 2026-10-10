@@ -25,11 +25,6 @@ footer.site{border-top:1px solid rgba(255,255,255,.16)}
   .hero .left{padding-top:86px}
 }
 
-/* About: principles on the dark theme */
-.dark-sec .value{border-top-color:rgba(255,255,255,.35)}
-.dark-sec .value h3{color:#fff}
-.dark-sec .value p{color:rgba(247,247,247,.7)}
-
 /* About: "How We Work" on the light theme, steps as pinned note cards */
 .process h2 em{color:var(--gold-deep)}
 .process .step{background:var(--gold);color:var(--ink);padding:28px 24px 30px;border:0;box-shadow:0 14px 30px rgba(42,42,40,.2);transition:transform .45s,box-shadow .45s}
